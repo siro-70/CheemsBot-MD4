@@ -55,15 +55,15 @@ global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
 global.vcardowner = ['79586848937'] //ur owner number
-global.ownername = "Lairen Bot" //ur owner name
-global.ytname = "Lairen-Bot" //ur yt chanel name
+global.ownername = "Alex Bot" //ur owner name
+global.ytname = "Alex-Bot" //ur yt chanel name
 global.socialm = "GitHub: DGXeon" //ur github or insta name
 global.location = "India, Mizoram, Aizawl" //ur location
 
 //bot bomdy 
 global.owner = ['79586848937']
 global.ownertag = '79586848937' //ur tag number
-global.botname = 'Lairen Bot' //ur bot name
+global.botname = 'Alex Bot' //ur bot name
 global.linkz = "https://youtube.com/channel/UCeGgOY9B-5fYrYD5ELPgMkQ" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtube.com/channel/UCeGgOY9B-5fYrYD5ELPgMkQ" //ur website to be displayed
 global.botscript = 'https://wa.me/+79586848937' //script link
@@ -106,19 +106,19 @@ global.prefa = ['','!','.','🐦','💎','😩']
 global.sp = '⭔'
 global.mess = {
     success: 'Done ✓',
-    admin: 'This Feature Is Only For Admin!',
-    botAdmin: 'Bot Must Be Admin First!',
-    owner: 'This Feature Is Only For Owner!',
-    group: 'Feature Used Only For Groups!',
-    private: 'Features Used Only For Private Chat!',
-    bot: 'This Feature Is Only For Bot',
-    wait: 'In process...',
-    linkm: 'Where is the link?',
-    error: 'Error!!',
-    endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
-    ban: 'You have been banned by the owner, if you want to be unbanned, chat owner.',
-    nsfw: 'The nsfw feature has not been activated, please contact the admin to activate',
-    banChat: 'The bot was banned in this group, please contact the owner to unban'
+    admin: 'هذه الميزة للمشرف فقط! ',
+    botAdmin: 'يجب أن يكون البوت مشرف أولاً! ',
+    owner: 'هذه الميزة لمالك البوت فقط! ',
+    group: 'الميزه مستخدمة للمجموعات فقط! ',
+    private: 'الميزة مستخدمة للدردشة الخاصة فقط! ',
+    bot: 'هذة الميزة مستخدمة للبوت فقط',
+    wait: 'قيد المعالجة... ',
+    linkm:'أين هو الرابط؟ ',
+    error: 'خطأ!!',
+    endLimit: 'انتهت صلاحية الحد اليومي الخاص بك ، وسيتم إعادة تعيين الحد كل 12 ساعة',
+    ban: 'لقد تم حظرك من قبل المالك ، إذا كنت تريد أن تكون غير محظور ، مالك الدردشة.',
+    nsfw: 'لم يتم تنشيط ميزة nsfw ، يرجى الاتصال بالمسؤول للتفعيل',
+    banChat: 'تم حظر الروبوت في هذه المجموعة ، يرجى الاتصال بالمالك لإلغاء الحظر'
 }
     global.limitawal = {
     premium: "Infinity",
