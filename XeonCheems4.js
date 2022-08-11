@@ -581,117 +581,117 @@ XeonBotInc.sendReadReceipt(from, m.sender, [m.key.id])}
 if (AntiLink) {
 linkgce = await XeonBotInc.groupInviteCode(from)
 if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-reply(`\`\`\`「 Group Link Detected 」\`\`\`\n\nYou won't be kicked by a bot because what you send is a link to this group`)
+reply(`\`\`\`「 Group Link Detected 」\`\`\`\n\nلن يطردك الربوت لان ماترسله رابط لهذه المجموعة`)
 } else if (isUrl(m.text)) {
-bvl = `\`\`\`「 Group Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to post any link`
+bvl = `\`\`\`「 Group Link Detected 」\`\`\`\n\nارسل المسؤول رابط ,والمسؤول حر في ارسال اي رابط`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Group Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Group Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طردة بسبب ارسال رابط في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 }
-  // Antiwame by xeon
+  // Antiwame by alex
   if (antiWame)
   if (budy.includes(`wa.me`)) {
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link😇`
+bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nارسل المسؤول رابط واتس اب ,والمسؤول حر في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب ارسال رابط فيديو يوتيوب في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
   if (antiWame)
   if (budy.includes(`http://wa.me`)) {
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link😇`
+bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nارسل المسؤول رابط واتس اب والمسؤول له الحريه في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب ارسال رابط فيديو من اليوتيوب`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
-//antivirtex by xeon
+//antivirtex by alex
   if (antiVirtex) {
   if (budy.length > 3500) {
-  reply(`Somebody spammed virus!! Mark as read⚠️\n`.repeat(300))
+  reply(`شخص ما ارسل سبام فايروس!!ضع  اشارة مقروءة⚠️\n`.repeat(300))
   reply(`\`\`\`「 Virus Detected 」\`\`\`\n\nSorry You Will Be Kicked !`)
   if (!isBotAdmins) return reply(mess.botAdmin)
   XeonBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
   }
   }
-//anti bad words by xeon
+//anti bad words by alex
 if (antiToxic)
 if (bad.includes(messagesD)) {
-tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+tos = ['مرحبا, راقب فمك','لم تتعلم ابدا كيف تتحدث?','توقف عن ان تكون ساما ياصديقي🤢','لاتكن ساما🦄']
 sin =  tos[Math.floor(Math.random() * (tos.length))]
 reply(sin)
 if (m.text) {
-bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
+bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nانت تستخدم كلمة سيئة ولكن لن اطردك لانك مشرف😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب استخدام كلمة سيئة في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})}
 }
-//antilink youtube video by xeon
+//antilink youtube video by alex
 if (AntiLinkYoutubeVid)
 if (budy.includes("https://youtu.be/")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 YoutTube Video Link Detected 」\`\`\`\n\nAdmin has sent a youtube video link, admin is free to send any link😇`
+bvl = `\`\`\`「 YoutTube Video Link Detected 」\`\`\`\n\nارسل المسؤول رابط فيديو يوتيوب والمسؤول له الحريه في ارسال اي رابط 😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 YouTube Video Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 YouTube Video Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب ارسال رابط فيديو يوتيوب في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
-//antilink youtube channel by xeon
+//antilink youtube channel by alex
 if (AntiLinkYoutubeChannel)
    if (budy.includes("https://youtube.com/")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 YoutTube Channel Link Detected 」\`\`\`\n\nAdmin has sent a youtube channel link, admin is free to send any link😇`
+bvl = `\`\`\`「 YoutTube Channel Link Detected 」\`\`\`\n\nارسل المسؤول راابط قناه يوتيوب والمسؤول له الحريه في ارسال الروابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 YouTube Channel Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending youtube channel link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 YouTube Channel Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طردة بسبب ارسال رابط قناه يوتيوب في هذه المجموعه`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 //antilink instagram by xeon
 if (AntiLinkInstagram)
    if (budy.includes("https://www.instagram.com/")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Instagram Link Detected 」\`\`\`\n\nAdmin has sent a instagram link, admin is free to send any link😇`
+bvl = `\`\`\`「 Instagram Link Detected 」\`\`\`\n\nارسل المسؤول رابط فيسبوك والمسؤول له الحريه في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Instagram Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending instagram link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Instagram Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طردة بسبب ارسال رابط اينستاغرام في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 //antilink facebook by xeon
 if (AntiLinkFacebook)
    if (budy.includes("https://facebook.com/")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Facebook Link Detected 」\`\`\`\n\nAdmin has sent a facebook link, admin is free to send any link😇`
+bvl = `\`\`\`「 Facebook Link Detected 」\`\`\`\n\nارسل المشرف رابط عللى الفيسبوك والمسؤول حر في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Facebook Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending facebook link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Facebook Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب ارسال رابط فيسبوك في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 //antilink telegram by xeon
@@ -699,52 +699,52 @@ if (AntiLinkTelegram)
    if (budy.includes("https://t.me/")){
 if (AntiLinkTelegram)
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Telegram Link Detected 」\`\`\`\n\nAdmin has sent a telegram link, admin is free to send any link😇`
+bvl = `\`\`\`「 Telegram Link Detected 」\`\`\`\n\nارسل المسؤول رابط تيليجرام والمسؤول حر في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Telegram Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending telegram link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Telegram Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب ارسال رابط تيليجرام في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 //antilink tiktok by xeon
 if (AntiLinkTiktok)
    if (budy.includes("https://www.tiktok.com/")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Tiktok Link Detected 」\`\`\`\n\nAdmin has sent a tiktok link, admin is free to send any link😇`
+bvl = `\`\`\`「 Tiktok Link Detected 」\`\`\`\n\nارسل المسؤول رابط تيك توك والمسؤول حر في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending tiktok link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب ارسال رابط تيك توك في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 //antilink twitter by xeon
 if (AntiLinkTwitter)
    if (budy.includes("https://twitter.com/")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Twitter Link Detected 」\`\`\`\n\nAdmin has sent a twitter link, admin is free to send any link😇`
+bvl = `\`\`\`「 Twitter Link Detected 」\`\`\`\n\nارسل المسؤول رابط تويتر والمسؤول حر في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending twitter link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طردة بسبب ارسال رابط تويتر في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 //antilink all by xeon
 if (AntiLinkAll)
    if (budy.includes("https://")){
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to send any link😇`
+bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nارسل المسؤول رابط والمسؤول حر في ارسال اي رابط😇`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} تم طرده بسبب ارسال رابط في هذه المجموعة`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 
@@ -786,11 +786,11 @@ const emoji = new EmojiAPI();
 emoji.get(satu)
 .then(emoji => {
 const buttons = [{buttonId: "y", buttonText: {displayText:satu}, type: 1}]
-const buttonMessage = {image: {url: emoji.images[dua].url},caption: "Here you go!",footerText: `${botname}`,buttons: buttons,headerType: 4}
+const buttonMessage = {image: {url: emoji.images[dua].url},caption: "ها انت ذا!",footerText: `${botname}`,buttons: buttons,headerType: 4}
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 })
 } catch (e) {
-reply("Emoji error, please enter another emoji\nNOTE : Just enter 1 emoji")
+reply("خطا ايموجي, الرجاء ادخال رمز تعبيري اخر\nملاحظة : ادخل رمز تعبيري واحد فقط")
 }
 }
 
@@ -851,7 +851,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklagu[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, XeonBotInc.user.name, m)
+                await XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'تخمين الاغنية', buttonText: { displayText: 'تخمين الاغنية' }, يكتب: 1 }], `🎮 تخمين الموسيقى 🎮\n\nاجابة خاطئة 🎉\n\nهل تريد اللعب مرة اخرى؟اضغط على الزر ادناه`, XeonBotInc.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
