@@ -860,7 +860,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await reply(`🎮 Math Quiz 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Send ${prefix}math mode`)
+                await reply(`🎮 مسابقة الرياضيات 🎮\n\nاجابة خاطئة 🎉\n\nهل تريد ان تلعب مرة اخرى؟ $ارسل{prefix}math mode`)
                 delete kuismath[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -869,7 +869,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakgambar[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, XeonBotInc.user.name, m)
+                await XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'خمن الصورة', buttonText: { displayText: 'تخمين الصورة' }, اكتب: 1 }], `🎮 تخمين الصورة 🎮\n\nاجابة خاطئة🎉\n\nهل تريد اللعب مرة اخرى؟ اظغط على الزر ادناه`, XeonBotInc.user.name, m)
                 delete tebakgambar[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -878,7 +878,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkata[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, XeonBotInc.user.name, m)
+                await XeonBotInc.sendButtonText(m.chat, [{ buttonId: 'خمن الكلمة', buttonText: { displayText: 'خمن الكلمة' }, اكتب: 1 }], `🎮 خمن الكلمة 🎮\n\nاجابة خاطئة 🎉\n\nهل تريد اللعب مرة اخرى؟ اضغط على الزر ادناه`, XeonBotInc.user.name, m)
                 delete tebakkata[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -1094,25 +1094,25 @@ const reactionMessage = {
                 const timestampe = speed();
 const latensie = speed() - timestampe
                 const menulist = `┌─❖
-│「 Hi 👋 」
+│「 مرحبا 👋 」
 └┬❖ 「 ${pushname} 」
-┌┤✑  How Are You? 😄
+┌┤✑  كيف حالك؟😄
 │└────────────┈ ⳹
 │
-└─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
-│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
-│𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
-│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+└─「 معلومات البوت 」       
+│السرعة : ${latensie.toFixed(4)} miliseconds
+│مدة العرض : ${runtime(process.uptime())}
+│أسم البوت: ${global.botname}
+│أسم المالك : ${global.ownername}
+│المالك : ${global.owner}
+│اسم الضيف : ${os.hostname()}
+│برنامج : ${os.platform()}
+│اجمالي المستخدم : ${Object.keys(global.db.data.users).length}
+│مجموعة الضربات : ${jumlahcmd}
+│مجموع ضرب اليوم: ${jumlahharian}
 └┬────────────┈ ⳹
-   │✑  Please Select
-   │✑  The Button Below
+   │✑  الرجاء تحديد
+   │✑  الزر ادناه
    └─────────────┈ ⳹`
    
    //randoming function
@@ -2724,12 +2724,12 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the youtube video link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nIfاذا لم تكن مسؤول فلا ترسل رابط يوتيوب والا فسيتم طردك على الفور !`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkYoutubeVid) return replay('Already deactivated')
+if (!AntiLinkYoutubeVid) return replay('معطلة بالفعل')
 let off = ntilinkytvid.indexOf(from)
 ntilinkytvid.splice(off, 1)
-replay('Success in turning off youtube video antilink in this group')
+replay('النجاح في ايقاف تشغيل مانع الارتباط بفيديو يوتيوت في هذه المجموعة')
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -2910,12 +2910,12 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the twitter link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nIf اذا لم تكن مسؤول فلا ترسل رابط قناه على اليوتيوب والا فسيتم طردك على الفور `, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkTwitter) return replay('Already deactivated')
+if (!AntiLinkTwitter) return replay('معطلة بالفعل')
 let off = ntilinktwt.indexOf(from)
 ntilinktwt.splice(off, 1)
-replay('Success in turning off twitter antilink in this group')
+replay('النجاح في ايقاف تشغيل رابط تويتر في هذه المجموعة')
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -2941,12 +2941,12 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send any link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nIf اذا لم تكن مسؤول فلا اترسل أي رابط في هذه المجموعة والا فسيتم طردك على الفور !`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkAll) return replay('Already deactivated')
+if (!AntiLinkAll) return replay('تم الغاء التفعيل')
 let off = ntilinkall.indexOf(from)
 ntilinkall.splice(off, 1)
-replay('Success in turning off all antilink in this group')
+replay('النجاح في ايقاف تشغيل جميع مضادات الارتباط في هذه المجموعة')
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -2972,12 +2972,12 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNo body is allowed to send virus in this group, member who send will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير⚠️ 」\`\`\`\n\nلا يسمح لاي شخص بارسال فيروس في هذه المجموعة ,سيتم طرد العضو الذي ارسل على الفور!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiVirtex) return replay('Already deactivated')
+if (!antiVirtex) return replay('معطلة بالفعل')
 let off = ntvirtex.indexOf(from)
 ntvirtex.splice(off, 1)
-replay('Success in turning off antivirus this group')
+replay('النجاح في ايقاف تشغيل مكافحة الفيروسات في هذه المجموعة')
 } else {
   let buttonsntvirtex = [
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -2994,14 +2994,14 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (Autoreply) return replay('Already activated')
+if (Autoreply) return replay('مفعلة بالفعل')
 autorep.push(from)
-replay('Success in turning on the autoreply in this group')
+replay('النجاح في تشغيل الرد التلقائي في هذه المجموعة')
 } else if (args[0] === "off") {
-if (!Autoreply) return replay('Already deactivated')
+if (!Autoreply) return replay('معطلة بالفعل')
 let off = autorep.indexOf(from)
 autorep.splice(off, 1)
-replay('Success in turning off autoreply in this group')
+replay('النجاح في ايقاف تشغيل الرد التلقائي في هذه المجموعة')
 } else {
   let buttonswlcm = [
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -3027,12 +3027,12 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNobody is allowed to use bad words in this group, one who uses will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️تحذير ⚠️ 」\`\`\`\n\nلا يسمح لاي شخص باستخدام كلمات مسيئة في هذه المجموعة ,سيتم طردالشخص الذي يستخدمها عللى الفور`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiToxic) return replay('Already deactivated')
+if (!antiToxic) return replay('معطلة بالفعل')
 let off = nttoxic.indexOf(from)
 nttoxic.splice(off, 1)
-replay('Success in turning off antitoxic in this group')
+replay('النجاح في ايقاف تشغيل مضاد السموم في هذه المجموعة')
 } else {
   let buttonsnttoxci = [
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
@@ -3224,7 +3224,7 @@ for (let i of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube 🍓',
+displayText: 'اليوتيوب🍓',
 url: `${global.websitex}`
 }
 }, {
@@ -3234,17 +3234,17 @@ url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
+displayText: 'حالة البوت🚀',
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
+displayText: 'قائمة الاوامر🐰',
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'المطور😈',
 id: 'owner'
 }
 }]
@@ -3265,7 +3265,7 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube 🍓',
+displayText: 'اليوتيوب🍓',
 url: `${global.websitex}`
 }
 }, {
@@ -3275,17 +3275,17 @@ url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
+displayText: 'حالة البوت 🚀',
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
+displayText: 'قائمة الاوامر 🐰',
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'المطور😈',
 id: 'owner'
 }
 }]
@@ -3307,7 +3307,7 @@ if (!isCreator) return replay(mess.owner)
                     await sleep(1500)
                     let butoon = [{
                                 urlButton: {
-                                displayText: 'YouTube 🍓',
+                                displayText: 'اليوتيوب 🍓',
 url: `${global.websitex}`
                                 }
                             }, {
@@ -3317,17 +3317,17 @@ url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
+displayText: 'حالة البوت 🚀',
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
+displayText: 'قائمة الاوامر🐰',
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'المطور😈',
 id: 'owner'
 }
 }]
@@ -8711,7 +8711,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 } else {
                 let sections = [
                 {
-                title: "😛CHANGE BOT MENU😛",
+                title: "😛تغيير قائمة البوت😛",
                 rows: [
                 {title: "Image Menu", rowId: `setmenu templateImage`, description: `Tap to change bot menu to Image Menu`},
                 {title: "Gif Menu", rowId: `setmenu templateGif`, description: `Tap to change bot menu to Gif Menu`},
@@ -8779,7 +8779,7 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 	                let btn = [{
                                 urlButton: {
-                                    displayText: 'YouTube 🍒',
+                                    displayText: 'اليوتيوب 🍒',
                                     url: `${websitex}`
                                 }
                             }, {
@@ -8789,17 +8789,17 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'All Menu 🍱',
+                                    displayText: 'جميع الاوامر 🍱',
                                     id: 'allmenu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'List Menu 🍢',
+                                    displayText: 'قائمة الاوامر🍢',
                                     id: 'command'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner 🤣',
+                                    displayText: '💎رقم الصانع💎',
                                     id: 'owner'
                                 }
                             }]
@@ -8816,11 +8816,11 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         /////////XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
-        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
+        	{ urlButton: { displayText: `اليوتيوب 🍒`, url : `${websitex}` } },
             { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
-            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
-            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
-            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+            { quickReplyButton: { displayText: `جميل الاوامر 🍱`, id: 'allmenu'} },
+            { quickReplyButton: { displayText: `قائمة الاوامر 🍢`, id: 'command'} },
+            { quickReplyButton: { displayText: `رقم الصانع💎`, id: 'owner'} }
         	]
         	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
@@ -8847,75 +8847,75 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								]
 							},
 							{
-								"title": "Bot Features ❤️",
+								"title": "ميزات البوت ❤️",
 								"rows": [
 									{
-										"title": "All Menu 🥀",
+										"title": "جميع الاوامر 🥀",
 										"description": "Displays The List Of All The Features!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
-										"title": "Owner Menu 💠",
+										"title": "قائمة المالك💠",
 										"description": "Displays The List Of Owner Features",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
-										"title": "Group Menu ✨",
+										"title": "قائمة المجموعة✨",
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
 										{
-										"title": "Maker Menu 🌈",
+										"title": "قائمة التصمييم🌈",
 										"description": "Displays The List Of Logo Making Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Sound Menu 🎵",
+										"title": "قائمة الصوت🎵",
 										"description": "Displays The List Of Sound Features",
 										"rowId": `${prefix}soundmenu`
 									},
 									{
-										"title": "Download Menu ↘️",
+										"title": "قائمة التحميل↘️",
 										"description": "Displays The List Of Download Features",
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
-										"title": "Sticker Menu 🃏",
+										"title": "قائمة الملصقات 🃏",
 										"description": "Displays The List Of Sticker Features",
 										"rowId": `${prefix}indomenu`
 									},
 									{
-										"title": "Search Menu 🔎",
+										"title": "قائمة البحث🔎",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
 									},
 									{
-										"title": "Tool Menu ⚙️",
+										"title": "قائمة الادوات ⚙️",
 										"description": "Displays The List Of Tool Features",
 										"rowId": `${prefix}toolmenu`
 									},
 									{
-										"title": "Random Image Menu 🌆",
+										"title": "قائمة الصور العشوائية🌆",
 										"description": "Displays The List Of Random Image Features",
 										"rowId": `${prefix}randomimagemenu`
 									},
 									{
-										"title": "Image Effect Menu 🖼️",
+										"title": "قائمة تاثيرات الصور 🖼️",
 										"description": "Displays The List Of Image Effect Features",
 										"rowId": `${prefix}imageeffectmenu`
 									},
 										{
-											"title": "Anime Menu 😘",
+											"title": "قائمة الانمي😘",
 										"description": "Displays The List Of Random Anime Features",
 										"rowId": `${prefix}animemenu`
 										},
 										{
-											"title": "Emote Menu 😀",
+											"title": "قائمة الايموجي😀",
 										"description": "Displays The List Of Emote Features",
 										"rowId": `${prefix}emotemenu`
 										},
 										{
-										"title": "Anime Sticker Menu ☺️",
+										"title": "قائمة ملصقات الانمي☺️",
 										"description": "Displays The List Of Anime Sticker Features",
 										"rowId": `${prefix}animestickermenu`
 									     },
